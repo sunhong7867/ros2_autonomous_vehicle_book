@@ -105,8 +105,15 @@ class Yolov8Node(LifecycleNode):
     def on_activate(self, state: LifecycleState) -> TransitionCallbackReturn:
         self.get_logger().info(f'Activating {self.get_name()}')
 
-        self.yolo = YOLO(self.model)
-        self.yolo.fuse()
+        try:
+            self.yolo = YOLO(self.model)  # 모델 로딩
+            self.yolo.fuse()
+        except FileNotFoundError:
+            self.get_logger().error(f"Error: Model file '{self.model}' not found!")
+            return TransitionCallbackReturn.FAILURE
+        except Exception as e:
+            self.get_logger().error(f"Error while loading model '{self.model}': {str(e)}")
+            return TransitionCallbackReturn.FAILURE
 
         # subs
         self._sub = self.create_subscription(
@@ -119,6 +126,7 @@ class Yolov8Node(LifecycleNode):
         super().on_activate(state)
 
         return TransitionCallbackReturn.SUCCESS
+
 
     def on_deactivate(self, state: LifecycleState) -> TransitionCallbackReturn:
         self.get_logger().info(f'Deactivating {self.get_name()}')
