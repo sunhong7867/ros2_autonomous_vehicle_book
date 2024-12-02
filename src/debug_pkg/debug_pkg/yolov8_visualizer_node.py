@@ -44,7 +44,7 @@ from interfaces_pkg.msg import Detection
 from interfaces_pkg.msg import DetectionArray
 
 
-class DebugNode(LifecycleNode):
+class Yolov8VisualizerNode(LifecycleNode):
 
     def __init__(self) -> None:
         super().__init__("debug_node")
@@ -293,7 +293,7 @@ class DebugNode(LifecycleNode):
 
 def main():
     rclpy.init()
-    node = DebugNode()
+    node = Yolov8VisualizerNode()
     node.trigger_configure()
     node.trigger_activate()
     rclpy.spin(node)
