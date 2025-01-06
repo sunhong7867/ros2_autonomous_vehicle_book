@@ -7,11 +7,12 @@ import cv2
 import numpy as np
 from cv_bridge import CvBridge
 
-# 변수 설정
+#---------------Variable Setting---------------
 SUB_ROI_IMAGE_TOPIC = "roi_image"        # ROI 이미지 토픽
 SUB_SPLINE_PATH_TOPIC = "path_planning_result"  # 경로 계획 결과 토픽
 PUB_TOPIC_NAME = "visualized_image"      # 시각화된 이미지 퍼블리시 토픽
 
+#----------------------------------------------
 class PathVisualizerNode(Node):
     def __init__(self):
         super().__init__('path_visualizer_node')
