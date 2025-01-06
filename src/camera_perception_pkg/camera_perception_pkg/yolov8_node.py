@@ -50,12 +50,17 @@ class Yolov8Node(LifecycleNode):
 
     def __init__(self, **kwargs) -> None:
         super().__init__("yolov8_node", **kwargs)
-
-        # params
+        
+        #---------------Variable Setting---------------
+        # 딥러닝 모델 pt 파일명 작성
         #self.declare_parameter("model", "yolov8m.pt")
         self.declare_parameter("model", "best.pt")
+        
+        # 추론 하드웨어 선택 (cpu / gpu) 
         self.declare_parameter("device", "cpu")
         #self.declare_parameter("device", "cuda:0")
+        #----------------------------------------------
+        
         self.declare_parameter("threshold", 0.5)
         self.declare_parameter("enable", True)
         self.declare_parameter("image_reliability",
