@@ -82,7 +82,7 @@ class Yolov8InfoExtractor(Node):
         grad = CPFL.dominant_gradient(roi_image, theta_limit=70)
                 
         target_points = []
-        for target_point_y in range(5, 155, 50):  # 예시로 90에서 150까지 10씩 증가
+        for target_point_y in range(5, 155, 50):  # 예시로 5에서 155까지 50씩 증가
             target_point_x = CPFL.get_lane_center(roi_image, detection_height=target_point_y, 
                                                 detection_thickness=10, road_gradient=grad, lane_width=300)
             
