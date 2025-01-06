@@ -101,17 +101,21 @@ class MotionPlanningNode(Node):
             if self.lane_data is None:
                 self.steering_command = 0
             else:    
-                target_point = (self.lane_data.target_x, self.lane_data.target_y) # 차선의 중심점
-                car_center_point = (320, 179) # roi가 잘린 후 차량 앞 범퍼 중앙 위치
-
-                target_slope = DMFL.calculate_slope_between_points(target_point, car_center_point)
+                target_points = (self.lane_data.target_points)
                 
-                if target_slope > 0:
-                    self.steering_command =  7 # 예시 속도 값 (7이 최대 조향) 
-                elif target_slope < 0:
-                    self.steering_command =  -7
-                else:
-                    self.steering_command = 0
+                print(target_points)                
+                
+                if 0:
+                    car_center_point = (320, 179) # roi가 잘린 후 차량 앞 범퍼 중앙 위치
+
+                    # target_slope = DMFL.calculate_slope_between_points(target_point, car_center_point)
+                    
+                    # if target_slope > 0:
+                    #     self.steering_command =  7 # 예시 속도 값 (7이 최대 조향) 
+                    # elif target_slope < 0:
+                    #     self.steering_command =  -7
+                    # else:
+                    #     self.steering_command = 0
 
 
                 #### 이전 예시 ####
