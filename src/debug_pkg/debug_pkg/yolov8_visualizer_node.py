@@ -47,7 +47,7 @@ from interfaces_pkg.msg import DetectionArray
 class Yolov8VisualizerNode(LifecycleNode):
 
     def __init__(self) -> None:
-        super().__init__("debug_node")
+        super().__init__("yolov8_visualizer_node")
 
         self._class_to_color = {}
         self.cv_bridge = CvBridge()
