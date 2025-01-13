@@ -43,7 +43,7 @@ class PathPlannerNode(Node):
         # 타겟 지점 받아오기
         self.target_points = msg.target_points
         
-        # 타겟 지점이 5개 이상 모이면 경로 계획 시작
+        # 타겟 지점이 3개 이상 모이면 경로 계획 시작
         if len(self.target_points) >= 3:
             self.plan_path()
 
