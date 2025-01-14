@@ -17,4 +17,3 @@ def get_pyc(module_file):
     return module
 
 control_motor = get_pyc("control_motor.cpython-310.pyc")
-convert_arduino_msg = get_pyc("convert_arduino_msg.cpython-310.pyc")
