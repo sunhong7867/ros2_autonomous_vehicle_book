@@ -21,16 +21,6 @@ class ConvertProtocol():
   def __init__(self):
     pass
   
-  def process(self, motor):
-    steer = motor.steering
-    left_speed = motor.left_speed
-    right_speed = motor.right_speed 
-    
-    message = PROTOCOL.protocol_with_differential(steer, left_speed, right_speed)
-    
-    print(message)
-    return message
-  
 class ConvertProtocolNode(Node):
   def __init__(self, sub_topic=SUB_TOPIC_NAME, pub_topic=PUB_TOPIC_NAME):
     super().__init__('serial_protocol_converter_node')
@@ -53,11 +43,15 @@ class ConvertProtocolNode(Node):
     self.publisher_ = self.create_publisher(String, self.pub_topic , self.qos_profile)
     
       
-  def data_callback(self, motor):
-    protocol_msg = self.convert.process(motor)
+  def data_callback(self, motion_command):
+    steer = motion_command.steering
+    left_speed = motion_command.left_speed
+    right_speed = motion_command.right_speed 
     
+    converted_message = PROTOCOL.convert_to_serial_message(steer, left_speed, right_speed)
+    print(converted_message)
     msg = String()
-    msg.data = protocol_msg
+    msg.data = converted_message
     self.publisher_.publish(msg)
 
 def main(args=None):
