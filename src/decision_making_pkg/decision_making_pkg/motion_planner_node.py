@@ -71,7 +71,6 @@ class MotionPlanningNode(Node):
     def path_callback(self, msg: PathPlanningResult):
         self.path_data = list(zip(msg.x_points, msg.y_points))
                 
-
     def traffic_light_callback(self, msg: String):
         self.traffic_light_data = msg
 
