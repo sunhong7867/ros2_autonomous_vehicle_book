@@ -17,7 +17,7 @@ const int STEERING_SPEED = 128;
 const int resistance_most_left = 460;
 const int resistance_most_right = 352;
 
-// 한쪽 조향 최대 단계 수
+// 조향 최대 단계 수 (한 쪽 기준)
 const int MAX_STEERING_STEP = 7;
 
 // 제어 상태 변수
