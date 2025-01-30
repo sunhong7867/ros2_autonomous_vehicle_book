@@ -9,8 +9,6 @@ code = marshal.loads(pyc[16:])
 module = types.ModuleType('module_name')
 exec(code, module.__dict__)
 
-#import data_collection_func_lib as DCFL  # 숨겨진 코드 모듈
-
 def main():
     DATA_PATH = "./Collected_Datasets"
     CAMERA_NUM = 0
