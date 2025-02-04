@@ -2,6 +2,7 @@ import serial
 import marshal
 import types
 import os
+import time
 
 real_path = os.path.dirname(os.path.realpath(__file__))
 pyc = open((real_path)+'/data_collection_func_lib.cpython-310.pyc', 'rb').read()
@@ -18,7 +19,7 @@ def main():
     # 데이터 수집 객체 초기화
     data_collector = module.Data_Collect(path=DATA_PATH, cam_num=CAMERA_NUM, max_steering=MAX_STEERING)
     ser = serial.Serial(SERIAL_PORT, 9600, timeout=1)
-
+    time.sleep(1)
     try:
         # 숨겨진 코드 프로세스 시작
         while True:
