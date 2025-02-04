@@ -13,7 +13,7 @@ def main():
     DATA_PATH = "./Collected_Datasets"
     CAMERA_NUM = 0
     SERIAL_PORT = "/dev/ttyACM0"
-    MAX_STEERING = 10  # 사용자 정의 최대 조향 단계
+    MAX_STEERING = 7  # 사용자 정의 최대 조향 단계
 
     # 데이터 수집 객체 초기화
     data_collector = module.Data_Collect(path=DATA_PATH, cam_num=CAMERA_NUM, max_steering=MAX_STEERING)
