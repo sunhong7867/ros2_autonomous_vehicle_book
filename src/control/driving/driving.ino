@@ -1,5 +1,5 @@
 // 최대 입력 문자 수
-const unsigned int MAX_INPUT = 9;
+const unsigned int MAX_INPUT = 15;
 
 // 핀 번호 변수
 const int STEERING_1 = 2;
