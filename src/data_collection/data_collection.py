@@ -11,10 +11,12 @@ module = types.ModuleType('module_name')
 exec(code, module.__dict__)
 
 def main():
-    DATA_PATH = "./Collected_Datasets"
+    DATA_PATH= os.path.dirname(real_path) + '/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets' 
     CAMERA_NUM = 0
     SERIAL_PORT = "/dev/ttyACM0"
     MAX_STEERING = 7  # 사용자 정의 최대 조향 단계
+
+    print(DATA_PATH)
 
     # 데이터 수집 객체 초기화
     data_collector = module.Data_Collect(path=DATA_PATH, cam_num=CAMERA_NUM, max_steering=MAX_STEERING)
