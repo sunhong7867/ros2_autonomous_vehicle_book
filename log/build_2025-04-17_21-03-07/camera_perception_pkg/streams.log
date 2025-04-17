@@ -1,0 +1,27 @@
+[1.677s] Invoking command in '/home/sun/ros2_ws/build/camera_perception_pkg': PYTHONPATH=/home/sun/ros2_ws/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sun/ros2_ws/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sun/ros2_ws/build/camera_perception_pkg/build --no-deps symlink_data
+[2.014s] running develop
+[2.172s] running egg_info
+[2.173s] creating camera_perception_pkg.egg-info
+[2.173s] writing camera_perception_pkg.egg-info/PKG-INFO
+[2.173s] writing dependency_links to camera_perception_pkg.egg-info/dependency_links.txt
+[2.173s] writing entry points to camera_perception_pkg.egg-info/entry_points.txt
+[2.173s] writing requirements to camera_perception_pkg.egg-info/requires.txt
+[2.173s] writing top-level names to camera_perception_pkg.egg-info/top_level.txt
+[2.173s] writing manifest file 'camera_perception_pkg.egg-info/SOURCES.txt'
+[2.175s] reading manifest file 'camera_perception_pkg.egg-info/SOURCES.txt'
+[2.176s] writing manifest file 'camera_perception_pkg.egg-info/SOURCES.txt'
+[2.177s] running build_ext
+[2.177s] Creating /home/sun/ros2_ws/install/camera_perception_pkg/lib/python3.10/site-packages/camera-perception-pkg.egg-link (link to .)
+[2.178s] Installing image_publisher_node script to /home/sun/ros2_ws/install/camera_perception_pkg/lib/camera_perception_pkg
+[2.178s] Installing lane_info_extractor_node script to /home/sun/ros2_ws/install/camera_perception_pkg/lib/camera_perception_pkg
+[2.178s] Installing traffic_light_detector_node script to /home/sun/ros2_ws/install/camera_perception_pkg/lib/camera_perception_pkg
+[2.178s] Installing yolov8_node script to /home/sun/ros2_ws/install/camera_perception_pkg/lib/camera_perception_pkg
+[2.178s] 
+[2.178s] Installed /home/sun/ros2_ws/build/camera_perception_pkg
+[2.179s] running symlink_data
+[2.179s] creating /home/sun/ros2_ws/install/camera_perception_pkg/share/ament_index
+[2.179s] creating /home/sun/ros2_ws/install/camera_perception_pkg/share/ament_index/resource_index
+[2.179s] creating /home/sun/ros2_ws/install/camera_perception_pkg/share/ament_index/resource_index/packages
+[2.179s] symbolically linking /home/sun/ros2_ws/build/camera_perception_pkg/resource/camera_perception_pkg -> /home/sun/ros2_ws/install/camera_perception_pkg/share/ament_index/resource_index/packages
+[2.179s] symbolically linking /home/sun/ros2_ws/build/camera_perception_pkg/package.xml -> /home/sun/ros2_ws/install/camera_perception_pkg/share/camera_perception_pkg
+[2.253s] Invoked command in '/home/sun/ros2_ws/build/camera_perception_pkg' returned '0': PYTHONPATH=/home/sun/ros2_ws/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sun/ros2_ws/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sun/ros2_ws/build/camera_perception_pkg/build --no-deps symlink_data

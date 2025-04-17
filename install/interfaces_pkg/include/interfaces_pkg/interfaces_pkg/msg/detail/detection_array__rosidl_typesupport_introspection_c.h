@@ -1,0 +1,1 @@
+/home/sun/ros2_ws/build/interfaces_pkg/rosidl_typesupport_introspection_c/interfaces_pkg/msg/detail/detection_array__rosidl_typesupport_introspection_c.h
